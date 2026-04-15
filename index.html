@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curling Tournament Finder</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Amateur-Friendly Curling Travel Planner</p>
+        <h1>Pick your home city and find bonspiels worth the trip.</h1>
+        <p class="hero-copy">
+          This list is curated for an amateur curler who wants to travel to
+          other cities over the next 3 months. Events are sorted by distance
+          from your selected city.
+        </p>
+
+        <div class="controls">
+          <label class="field" for="city-select">
+            <span>Your home city</span>
+            <select id="city-select">
+              <option value="raleigh">Raleigh, NC</option>
+              <option value="san-jose">San Jose, CA</option>
+              <option value="nashville">Nashville, TN</option>
+            </select>
+          </label>
+
+          <div class="window-card">
+            <span class="window-label">Date window</span>
+            <strong>April 15, 2026 to July 15, 2026</strong>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="summary-panel">
+          <div>
+            <p class="summary-label">Showing tournaments for</p>
+            <h2 id="selected-city-label">Raleigh, NC</h2>
+          </div>
+          <p id="summary-text" class="summary-text"></p>
+        </section>
+
+        <section>
+          <div id="tournament-list" class="tournament-grid"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          Tournament details were curated from club pages and regional curling
+          calendars on April 15, 2026. Availability can change quickly, so use
+          the source links before planning travel.
+        </p>
+      </footer>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
